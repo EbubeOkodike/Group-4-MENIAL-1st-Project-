@@ -4,7 +4,7 @@ put all your css files in this static folder!!!
 
 - blue : #4597F5 
 
-/*note: take all colors specified as general and for all usages in the wireframe, unless specified in brackets.*/
+*note: take all colors specified as general and for all usages in the wireframe, unless specified in brackets.*
 
 - green : #85E024
 
