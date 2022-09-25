@@ -1,0 +1,73 @@
+{%extends 'base.html'%}
+
+{%block title%} client {%endblock%}
+
+{%block content%}
+<div class="cregcontainer">
+
+    <div class="creghead">
+
+        <h4> Register Here </h4>
+        
+    </div>
+    <div class="hr">
+        <hr style="color: solid 1px #4597F5;">
+    </div>
+    
+    <form action=" " method="post">
+        {{ form.csrf_token}}
+        <div class="cregform">
+                
+            <div class="fullname">
+                {{form.name.label}} <br>
+                <div class="namel">
+                    {{ form.name}}
+                </div>
+            </div>
+        
+            <div class="homeaddres">
+                {{form.home_address.label}} <br>
+                <div class="homel">
+                    {{ form.home_address}}
+                </div>
+        
+            </div>
+        
+            <div class="phonenumber">
+                {{form.phone_number.label}} <br>
+                <div class="phonel">
+                    {{ form.phone_number}}
+                </div>
+        
+            </div>
+        
+            <div class="email">
+                {{form.email.label}} <br>
+                <div class="emaill">
+                    {{ form.email}}
+                </div>
+            </div>
+        
+            <div class="creatpassword">
+                {{form.password.label}} <br>
+                <div class="createpassl">
+                    {{ form.password}}
+                </div>
+            </div>
+                
+            <div class="confirmpassword">
+                {{form.confirm_password.label}} <br>
+                <div class="confirmpassl">
+                    {{ form.confirm_password}}
+                </div>
+            </div>
+        
+            <div class="submit">
+                {{form.submit()}}
+            </div>
+        </div>
+       
+    </form>
+    
+</div>
+{%endblock%}
