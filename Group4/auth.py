@@ -32,10 +32,6 @@ def login():
         login_user(client)
         return redirect( url_for('main.client_profile') )
 
-    if not client or not bcrypt.check_password_hash(client.password, password):
-        flash('Please check your login details and try again.')
-        #return redirect( url_for('auth.login') )
-
     return render_template('login.html')
 
     #if form.():

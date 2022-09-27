@@ -1,8 +1,16 @@
 {%extends 'base.html'%}
 
-{%block title%} contact {%endblock%}
+{%block title%} Login {%endblock%}
 
 {%block content%}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div>
+        {{ messages[0] }}
+    </div>
+{% endif %}
+{% endwith %}
 
 <div class="loginbox">
     <img src="avatar.png" alt="your picture">
@@ -18,12 +26,5 @@
 
     </form>
 </div>
-{% with messages = get_flashed_messages() %}
-{% if messages %}
-    <div>
-        {{ messages[0] }}
-    </div>
-{% endif %}
-{% endwith %}
 
 {%endblock%}
