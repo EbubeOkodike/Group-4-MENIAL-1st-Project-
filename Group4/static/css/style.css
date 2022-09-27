@@ -284,40 +284,63 @@ padding-top: 5em;
 } 
 .loginbox {
     width: 320px;
-    height: 420px;
+    height: 400px 320px;
     background-color: white;
     color: #000;
     top: 50%;
     left: 50%;
     position: absolute;
-    transform: translate(-50,-50);
-    box-sizing: border-box;
+    transform: translate(-40,-50);
     padding: 70px 30px;
+    border: 1px solid #4597F5;
+    border-radius: 10px;
+    padding-top: 2%; 
+    box-shadow: 2px 0px 7px 0px black;
 }
 
-h1 {
+h2 {
     margin: 0;
     padding: 0;
     text-align: center;
-    font-size: 22px;
+    font-size: 30px;
+    color: #fff;
+    background-color: #85E024;
+    padding: 1px;
+    margin: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    top: 20%;
+    
 }
 .loginbox p{
     margin: 0;
+    border: 0px;
     padding: 0;
-    font-weight: bold;
 }
 .loginbox input{
     width: 100%;
     margin-bottom: 20px;
 }
 .loginbox input[type="text"], input[type="password"] {
-    border: none;
-    border-bottom: 1px solid ;
+    border:  1px solid #4597F5;
+    padding: 7px;
+    margin: 7px;
     outline: none;
-    height: 40px;
+    height: 30px;
+    border-radius: 10px ;
 }
-
-
+.loginbox input[type="submit"] {
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+    border-radius: 10px;
+    border: 1px solid #4597F5;
+    right: 1px;
+    position: absolute;
+    width: 70px;
+    height: 20px;
+    left: 70%;
+    bottom: 2%;
+}
 
 
 
