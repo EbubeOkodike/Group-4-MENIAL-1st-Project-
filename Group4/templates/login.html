@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{%block title%} contact {%endblock%}
+
+{%block content%}
+
+<div class="loginbox">
+    <img src="avatar.png" alt="your picture">
+    <h1 class="login head">login</h1>
+    <form method="post" action="">
+        <p>email address</p>
+        <input type="text" name="email" placeholder="enter your email">
+        <p>password</p>
+        <input type="password" name="password" placeholder="enter your password">
+        <input type="submit" name="" value="login">
+        <a href="#">lost your password</a>
+        <a href="#">don't have an account?</a>
+
+    </form>
+</div>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div>
+        {{ messages[0] }}
+    </div>
+{% endif %}
+{% endwith %}
+
+{%endblock%}
