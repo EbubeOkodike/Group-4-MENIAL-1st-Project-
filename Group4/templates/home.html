@@ -4,104 +4,98 @@
 
 {%block content%}
 
-<div class="bg">
-    <img src="{{url_for ('static', filename ='images/ronda_tree.png')}}" alt="bg">
+<div>
+    <a href="#lets-start"><button class=button id="first-button" onclick="" >Let's Get Started!</button></a>
 </div>
-<div class="logo">
-    <h5><a href="">lets get Started</a></h5>
-</div>
-<div class="contain">
+<div class="first">
     <div class="connect">
         <h1 class="head1">
-            Connect on Ronda 
+            Connect on Ronda! 
         </h1>
         <div class="head1_txt">    
             Are you looking for a certain service to hire?<br>
-
             <br>
-        
-            cant find an artisan to do your work for you?<br>
-
+            Can't find an artisan to do your work for you?<br>
             <br>
-        
             Or are you service provider looking for a platform <br> 
-            
             <br>
-            
-            to sell and advertise you service?<br>
-
+            to sell and advertise your services?<br>
             <br>
-
-                Then connect on Ronda!!!!
+                Then connect on Ronda!
         
-        </div>    
+        </div> 
     </div>
-
-
-
-    <div class="get_served">
-
+    <div class="bg">
+        <img src="{{url_for ('static', filename ='images/ronda_tree.png')}}" height="550px" alt="Connection tree">
+    </div>
+</div>
+    
+<div class="explain">
+    <div class="explain-txt">
         <h3 class="head2">
             Get Served Just The Way You Like
         </h3>
         <div class="head2_txt">
-            Select and specify how you want to be served <br>
-            and by who. we are here whenever service rendering is considered,<br>
+            Select and specify how you want to be served
+            and by who. we are here whenever service rendering is considered,
             your optimum satisfaction is our primary concern!!
         </div>
     </div>
+    <div>
+        <img id="pic" src="{{ url_for ('static', filename ='images/customer.jpg')}}" alt="client" width="500px">
+    </div>
+    
+</div>
 
-
-    <div class="promote">
-
-        <h3 class="head3">
+<div class="explain">
+    <div>
+        <h3 class="head2">
             Promote and Market your Services and Skills
         </h3>
-        <div class="head3_txt">
-            Select and specify how you want to be served <br>
-            and by who. we are here whenever service rendering is considered,<br>
-            your optimum satisfaction is our primary concern!!
+        <div class="head2_txt">
+            As a service provider, advertise your expertise, and
+            and grow your customer base. You are also provided with
+            opportunity to gain more patronage and recommendation
+            with the help of ratings, reviews, and referal made by 
+            your previous clients.
         </div>
     </div>
+    <div>
+        <img id="pic" src="{{ url_for('static', filename='images/Promote.jpg') }}" alt="promote" width="500px" height="320px">
+    </div>
+</div>
 
-    
-        
-    <div class="register">
+    <section id="lets-start">
+        <div class="register">
 
-        <div class="start">
-            <h1> So Let's Get Started! </h1>
-        </div>    
-           
-            
-       
-        <div class="customer">
-            <h3>Are you a customer</h5>
-
-            <h5 class="cbtn"><a href="">Register Here</a></h5>
-        </div>
-
-        <div class="or">
-            <h1>OR</h1>
-        </div>
-
-
-            
-
-        <div class="service_provider">
-            <h3>
-                A Service Provider <br> 
-                ready for Hire?
-            </h3>
-                    
-        <h5 class="spbtn"> <a href="">Register Here</a> </h5>
-
+            <div class="start">
+                <h1> So Let's Get Started! </h1>
+            </div>    
                 
-    
-        </div>
-            
+            <div class="customer">
+                <h3>Are you a customer?</h5>
+
+                    <div>
+                        <a href="{{ url_for('auth.signup') }}"><button class=button id="second-button" onclick="" >Register Here!</button></a>
+                    </div>
+            </div>
+
+            <div class="or">
+                <h1>OR</h1>
+            </div>
+
+            <div class="service_provider">
+                <h3>
+                    A Service Provider <br> 
+                    ready for Hire?
+                </h3>
+                <div>
+                    <a href="{{ url_for('auth.signup') }}"><button class=button id="second-button" onclick="" >Register Here!</button></a>
+                </div>
+                
+            </div>
             <p class="fn"> if you wish to create a hybrid account <a href="">click here</a></p>   
-         
         </div><br>
-    </div>
-</div>    
+    </section>
+
 {%endblock%}

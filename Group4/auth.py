@@ -1,6 +1,6 @@
 
 from flask import Blueprint, render_template, redirect, url_for, request, flash
-from .models import Client
+from .models import Client#, Serv_prov, Hybrid
 from flask_login import login_user, current_user, logout_user, login_required
 from .forms import RegistrationForm
 from . import db, bcrypt
@@ -32,15 +32,12 @@ def login():
         login_user(client)
         return redirect( url_for('main.client_profile') )
 
+    #serv_prov = Serv_prov.query.filter_by(email = email).first()
+
+    #hybrid = Hybrid.query.filter_by(email = email).first()
+
     return render_template('login.html')
 
-    #if form.():
-       # client = Client.query.filter_by(email = form.email.data).first()
-        #if client and (client.password, form.password.data): 
-         #   login_user(client)
-          #  return redirect( url_for('main.profile') )
-        
-    return render_template('login.html')
 
 @auth.route('/logout')
 @login_required

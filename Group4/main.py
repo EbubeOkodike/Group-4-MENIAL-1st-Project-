@@ -16,6 +16,16 @@ def home():
 def client_profile():
     return render_template('client.html', firstname = current_user.firstname)
 
+@main.route('/serv_prov_profile')
+@login_required
+def serv_prov_profile():
+    return render_template('servprov.html') #firstname = current_user.firstname)
+
+@main.route('/hybrid_profile')
+@login_required
+def hybrid_profile():
+    return render_template('hybrid.html') #firstname = current_user.firstname)
+
 
 @main.route('/about')
 def about():

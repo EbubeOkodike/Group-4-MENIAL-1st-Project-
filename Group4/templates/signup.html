@@ -1,48 +1,52 @@
 {%extends 'base.html'%}
 
-{%block title%} contact {%endblock%}
+{%block title%} SignUp {%endblock%}
 
 {%block content%}
-<form method="post" action="">
+<div class="formbox">
+    <h2 class="formhead">Register</h2>
 
-    <div>
-        {{ form.csrf_token}}
-    </div>
+    <form method="post" action="">
 
-    <div>
-        {{ form.firstname.label }}
-        {{ form.firstname(placeholder = "Your Firstname") }}
-    </div>
-    
-    <div>
-        {{ form.lastname.label }}
-        {{ form.lastname(placeholder = "Your Lastname") }}
-    </div>
+        <div>
+            {{ form.csrf_token}}
+        </div>
 
-    <div>
-        {{ form.email.label }}
-        {{ form.email(placeholder = "Input Your Email Address") }}
-    </div>
-    
+        <div>
+            {{ form.firstname.label }}
+            {{ form.firstname(placeholder = "Your Firstname") }}
+        </div>
+        
+        <div>
+            {{ form.lastname.label }}
+            {{ form.lastname(placeholder = "Your Lastname") }}
+        </div>
 
-    <div>
-        {{ form.age.label }}
-        {{ form.age(placeholder = "How Old Are You?") }}
-    </div>
+        <div>
+            {{ form.email.label }}
+            {{ form.email(placeholder = "Input Your Email Address") }}
+        </div>
+        
 
-    <div>
-        {{ form.password.label }}
-        {{ form.password }}
-    </div>
+        <div>
+            {{ form.age.label }}
+            {{ form.age(placeholder = "How Old Are You?") }}
+        </div>
 
-    <div>
-        {{ form.confirm_password.label }}
-        {{ form.confirm_password }}
-    </div>
-    
-    <div>
-        {{ form.submit }}
-    </div>
+        <div>
+            {{ form.password.label }}
+            {{ form.password }}
+        </div>
 
-</form>
+        <div>
+            {{ form.confirm_password.label }}
+            {{ form.confirm_password }}
+        </div>
+        
+        <div>
+            {{ form.submit }}
+        </div>
+
+    </form>
+</div>
 {%endblock%}

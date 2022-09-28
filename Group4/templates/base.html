@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block head %}
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +9,13 @@
     <link rel="icon" type="image/x-icon" href="{{url_for('static', filename='images/favicon.ico')}}">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
 
-    {% endblock%}
-
 </head>
 <body>
+
 <header>
     <nav>
         <div>
-            <img src="../static/images/Ronda Logo.png" alt="Ronda Logo" height="52px">
+            <img src="../static/images/Ronda Logo.png" alt="Ronda Logo" height="52px", width="100px">
         </div>
 
         <div class=links >
@@ -38,9 +36,10 @@
 </header><br>
     
 <div class="template_content">
-
-    {%block content%}  {%endblock%}
-
+    {%block content%}
+    {%endblock%}
 </div>
+
+
 </body>
 </html>
